@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.jahnen.libaums.storageprovider">
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <application>
+
+        <provider
+            android:name="me.jahnen.libaums.core.storageprovider.UsbDocumentProvider"
+            android:authorities="me.jahnen.libaums.storageprovider.documents"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS"
+            android:enabled="@bool/isAtLeastKitKat">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+
+    </application>
+
+</manifest>

@@ -2,9 +2,9 @@
 using Android.OS;
 using Android.Runtime;
 using AndroidX.AppCompat.App;
-using Com.Github.Mjdev.Libaums;
 using System;
 using System.Text;
+using ME.Jahnen.Libaums.Core;
 using Xamarin.Essentials;
 
 namespace LibaumsSample
